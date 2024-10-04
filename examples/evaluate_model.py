@@ -4,7 +4,7 @@ import torch
 from transformers import AutoTokenizer
 from torch.utils.data import DataLoader, TensorDataset
 from src.model import load_model_and_tokenizer
-from eval.evaluate import evaluate_model
+from src.evaluate import evaluate_model
 from src.utils import prepare_data
 
 def main(config_path):
