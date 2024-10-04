@@ -1,0 +1,19 @@
+# configs/train_config.yaml
+
+model:
+  name: "meta-llama/Meta-Llama-3-8B"      # Model name from Hugging Face
+  save_path: "models/fine_tuned_model"    # Path to save the fine-tuned model
+
+dataset:
+  name: "artem9k/ai-text-detection-pile"  # Hugging Face dataset name
+  split: "train[:10%]"                    # Dataset split for training
+  max_length: 128                         # Max length for tokenization
+
+training:
+  batch_size: 4                           # Batch size for training
+  num_epochs: 5                           # Number of epochs
+  learning_rate: 5e-6                     # Learning rate
+
+logging:
+  save_loss_plot: "results/loss_plot.png" # Path to save the loss plot
+  log_level: "INFO"                       # Logging level
