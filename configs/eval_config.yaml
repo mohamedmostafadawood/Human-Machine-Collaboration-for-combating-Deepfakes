@@ -1,0 +1,17 @@
+# configs/eval_config.yaml
+
+model:
+  name: "meta-llama/Meta-Llama-3-8B"      # Model name for loading
+  load_path: "models/fine_tuned_model"    # Path to load the fine-tuned model
+
+dataset:
+  name: "artem9k/ai-text-detection-pile"  # Hugging Face dataset name
+  split: "validation[:10%]"               # Dataset split for evaluation
+  max_length: 128                         # Max length for tokenization
+
+evaluation:
+  batch_size: 4                           # Batch size for evaluation
+  metrics_output: "results/eval_metrics.txt" # File to save evaluation metrics
+
+logging:
+  log_level: "INFO"                       # Logging level
